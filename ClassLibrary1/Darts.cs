@@ -7,14 +7,13 @@ namespace Darts
 {
     public class Dart
     {
-        Random random = new Random();
-
+        
         public int Score { get; set; }
         public int Band { get; set; }
         
-        public void Throw()
+        public void Throw(Random random)
         {
-            Score = this.random.Next(20);
+            Score = random.Next(0,21);
             
             if (random.Next(100) <= 5)
             {
@@ -25,8 +24,7 @@ namespace Darts
                 this.Band = random.Next(2);
             }
             else this.Band = 0;
-            
-            //comment
+                        
         }
 
     }
